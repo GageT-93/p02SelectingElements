@@ -7,3 +7,11 @@ describe('My anchor link assertion', () => {
         await browser.pause(2000)
     });
 });
+
+describe('My challenging dom assertion', () => {
+    it('should verify existence of table element', async () => {
+        await ChallengingDOMPage.open();
+        await expect (ChallengingDOMPage.nestedElement).toBeExisting();
+        await browser.pause(2000)
+    });
+});
